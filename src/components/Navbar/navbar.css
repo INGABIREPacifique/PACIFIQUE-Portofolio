@@ -1,0 +1,120 @@
+/* Base styles */
+.main-navbar {
+  display: flex;
+  justify-content: space-around;
+  gap: 120px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 0 20px;
+  height: 100px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.logo h1 {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.navlinks ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks ul li {
+  margin-left: 20px;
+}
+
+.navlinks ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navlinks ul li a:hover {
+  color: #ddd;
+}
+
+.nav-button button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-button button:hover {
+  background-color: #ddd;
+}
+
+/* Hamburger menu icon - hidden on large screens */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.menu-icon .bar {
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Animate hamburger to X when open */
+.menu-icon .change:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon .change:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon .change:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navlinks {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    flex-direction: column;
+    display: none; /* Hide by default */
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .navlinks ul {
+    flex-direction: column;
+  }
+
+  .navlinks ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .nav-button {
+    display: none; /* Hide resume button on small screens or you can adjust */
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}

@@ -1,0 +1,93 @@
+/* contact.css */
+
+/* Main container for the contact section */
+.main-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 80vh; /* Ensure it takes up a good portion of the viewport height */
+    padding: 40px 20px; /* Add padding around the content */
+    color: #e6f1ff; /* Light text color for contrast */
+    font-family: 'Inter', sans-serif; /* Consistent font */
+    text-align: center; /* Center text within the container */
+}
+
+/* Styling for the main heading */
+.main-contact h3 {
+    font-size: 3em; /* Large, prominent title */
+    color: #64ffda; /* Accent color */
+    margin-bottom: 30px; /* Space below the heading */
+    position: relative; /* For the underline effect */
+    padding-bottom: 10px; /* Space for the underline */
+}
+
+/* Underline effect for the heading */
+.main-contact h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #64ffda; /* Color of the underline */
+    border-radius: 2px;
+}
+
+/* Styling for the unordered list */
+.main-contact ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between list items */
+}
+
+/* Styling for individual list items */
+.main-contact li {
+    font-size: 1.4em; /* Readable font size for contact info */
+    color: #8892b0; /* Slightly muted text color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    display: flex; /* Use flex to align icon and text if icons are added */
+    align-items: center;
+    justify-content: center; /* Center text within list item */
+}
+
+/* Hover effect for list items */
+.main-contact li:hover {
+    color: #64ffda; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-contact {
+        padding: 30px 15px;
+    }
+
+    .main-contact h3 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+    }
+
+    .main-contact li {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-contact {
+        min-height: 60vh; /* Adjust min-height for smaller screens */
+        padding: 20px 10px;
+    }
+
+    .main-contact h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .main-contact li {
+        font-size: 1em;
+    }
+}
